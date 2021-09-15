@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  --primary-pale: hsl(225, 100%, 94%);
+  --primary-bright: hsl(245, 75%, 52%);
+  --primary-bright-opacity60: hsla(245, 75%, 52%, 0.6);
+
+  --neutral-pale: hsl(225, 100%, 98%);
+  --neutral: hsl(224, 23%, 55%);
+  --neutral-dark: hsl(223, 47%, 23%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  height: 100vh;
+  background: var(--primary-pale) url(/images/pattern-background-desktop.svg)
+    repeat-x;
+  font-family: "Red Hat Display", sans-serif;
+  place-items: center;
+}
+
+button {
+  border: none;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.card {
+  width: min-content;
+  border-radius: 1.5rem;
+  background-color: #fff;
+  text-align: center;
+  box-shadow: 0px 15px 50px -20px var(--neutral);
+  overflow: hidden;
+  margin: auto;
+}
+
+.card__content {
+  padding: 2.5rem 3rem;
+}
+
+.card__content > h1 {
+  margin-bottom: 1rem;
+  color: var(--neutral-dark);
+  font-size: 1.75rem;
+  font-weight: 900;
+}
+
+.card__content > p {
+  margin-bottom: 1.5rem;
+  color: var(--neutral);
+  line-height: 1.5;
+  padding: 0 1rem;
+}
+
+.plan {
+  display: grid;
+  margin-bottom: 2rem;
+  padding: 1.5rem 0.5rem;
+  border-radius: 0.75rem;
+  background-color: var(--neutral-pale);
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+}
+
+.plan__image {
+  margin: auto;
+}
+
+.plan__details {
+  display: flex;
+  line-height: 1.5;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.plan__title {
+  color: var(--neutral-dark);
+  font-size: 1.05rem;
+  font-weight: 900;
+}
+
+.plan__price {
+  color: var(--neutral);
+}
+
+.plan__change--btn {
+  color: var(--primary-bright);
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
+.plan__change--btn:hover,
+.plan__change--btn:active {
+  color: var(--primary-bright-opacity60);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.card__payment--btn {
+  width: 100%;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: 0.7rem;
+  background-color: var(--primary-bright);
+  color: var(--neutral-pale);
+  box-shadow: 0px 15px 40px -12px var(--primary-bright-opacity60);
+}
+
+.card__payment--btn:hover,
+.card__payment--btn:active {
+  background-color: var(--primary-bright-opacity60);
+}
+
+.card__cancel--btn {
+  margin-bottom: 0.75rem;
+  background: none;
+  color: var(--neutral);
+}
+
+.card__cancel--btn:hover,
+.card__cancel--btn:active {
+  color: var(--neutral-dark);
+}
+
+/* FRONTEND MENTOR ATTRIBUTION */
+.attribution {
+  font-size: 0.688rem;
+  text-align: center;
+  position: absolute;
+  bottom: 0.5rem;
+  width: 100vw;
+  margin: auto;
+}
+
+.attribution > a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 425px) {
+  html {
+    font-size: 0.85rem;
+  }
+
+  body {
+    background: var(--primary-pale) url(/images/pattern-background-mobile.svg)
+      repeat-x;
+  }
+
+  .card {
+    width: 85%;
+  }
+
+  .card__hero--img {
+    max-width: 100%;
+  }
+
+  .card__content {
+    padding: 1.5rem;
+  }
+}
