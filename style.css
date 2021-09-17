@@ -98,6 +98,7 @@ button {
   color: var(--primary-bright);
   font-size: 0.9rem;
   font-weight: 900;
+  transition: all 0.25s ease;
 }
 
 .plan__change--btn:hover,
@@ -115,6 +116,7 @@ button {
   background-color: var(--primary-bright);
   color: var(--neutral-pale);
   box-shadow: 0px 15px 40px -12px var(--primary-bright-opacity60);
+  transition: all 0.25s ease;
 }
 
 .card__payment--btn:hover,
@@ -126,6 +128,7 @@ button {
   margin-bottom: 0.75rem;
   background: none;
   color: var(--neutral);
+  transition: all 0.25s ease;
 }
 
 .card__cancel--btn:hover,
@@ -145,6 +148,11 @@ button {
 
 .attribution > a {
   color: hsl(228, 45%, 44%);
+  transition: all 0.25s ease;
+}
+
+.attribution > a:hover {
+  opacity: 0.6;
 }
 
 @media screen and (max-width: 425px) {
