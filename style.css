@@ -20,7 +20,7 @@
 
 body {
   display: grid;
-  height: 100vh;
+  min-height: 100vh;
   background: var(--primary-pale) url(images/pattern-background-desktop.svg)
     repeat-x;
   font-family: "Red Hat Display", sans-serif;
@@ -162,7 +162,8 @@ button {
 
   body {
     background: var(--primary-pale) url(images/pattern-background-mobile.svg)
-      repeat-x;
+      no-repeat;
+    background-size: contain;
   }
 
   .card {
@@ -175,5 +176,9 @@ button {
 
   .card__content {
     padding: 1.5rem;
+  }
+
+  .attribution {
+    display: none;
   }
 }
